@@ -799,6 +799,30 @@ a.evento-card .evento-nome::after {
   border-radius: 100px;
 }
 
+.evento-card.cancelado {
+  border-color: rgba(192, 57, 43, 0.4);
+  background: rgba(192, 57, 43, 0.08);
+}
+
+.evento-card.cancelado::before {
+  content: 'CANCELADO';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #FF8070;
+  background: rgba(192, 57, 43, 0.2);
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+}
+
+.evento-card.cancelado .evento-nome {
+  text-decoration: line-through;
+  color: #a1a1aa;
+}
+
 .evento-data {
   font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.4);
