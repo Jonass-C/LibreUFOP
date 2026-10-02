@@ -170,35 +170,23 @@
                xmlUrl="https://lwn.net/headlines/newrss"
                htmlUrl="https://lwn.net/"/>
 
-      <outline text="4Linux Blog"
-               title="4Linux"
-               type="rss"
-               xmlUrl="https://blog.4linux.com.br/feed/"
-               htmlUrl="https://blog.4linux.com.br/"/>
-
       <outline text="9to5Linux"
                title="9to5Linux"
                type="rss"
                xmlUrl="https://9to5linux.com/feed/"
                htmlUrl="https://9to5linux.com/"/>
 
-      <outline text="nixCraft"
-               title="nixCraft"
-               type="rss"
-               xmlUrl="https://www.cyberciti.biz/feed/"
-               htmlUrl="https://www.cyberciti.biz/"/>
-
-      <outline text="Slashdot Linux"
-               title="Slashdot Linux"
-               type="rss"
-               xmlUrl="http://rss.slashdot.org/Slashdot/slashdotLinux"
-               htmlUrl="https://linux.slashdot.org/"/>
-
       <outline text="Linux Magazine"
                title="Linux Magazine"
                type="rss"
                xmlUrl="https://www.linux-magazine.com/rss/feed/lmi_news"
                htmlUrl="https://www.linux-magazine.com/"/>
+
+      <outline text="LinuxLinks"
+               title="LinuxLinks"
+               type="rss"
+               xmlUrl="https://www.linuxlinks.com/feed/"
+               htmlUrl="https://www.linuxlinks.com/"/>
 
       <outline text="Notícias Diversas"
                title="Notícias Diversas"
