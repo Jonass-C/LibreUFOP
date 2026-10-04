@@ -53,11 +53,26 @@ nav {
   letter-spacing: -0.02em;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .nav-logo span {
   color: var(--gray-dark);
+}
+
+.nav-logo img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1.5px solid var(--red);
+  display: block;
+}
+
+.nav-logo::after {
+  display: none !important;
 }
 
 nav ul {
@@ -1030,7 +1045,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 6px;
   font-size: 0.78rem;
@@ -1039,6 +1054,13 @@ footer {
 
 .ufop-badge strong {
   color: rgba(255, 255, 255, 0.55);
+}
+
+.ufop-badge img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
 }
 
 /* ── ANIMATIONS ── */
