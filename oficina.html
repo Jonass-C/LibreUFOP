@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LibreUFOP – Software Livre, Formação e Integração com a Comunidade</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="docs/LibreUFOP_logo.jpeg">
+</head>
+
+<body>
+      <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo">
+        <img src="docs/LibreUFOP_logo.jpeg" alt="Logo LibreUFOP" class="logo-img" />
+        <p>
+          Libre<span>UFOP</span>
+        </p>
+      </div>
+    </a>
+    <ul>
+      <li><a href="index.html#sobre">Sobre</a></li>
+      <li><a href="index.html#canais">Canais</a></li>
+      <li><a href="index.html#eventos">Eventos</a></li>
+      <li><a href="index.html#formacao">Formação</a></li>
+      <li><a href="index.html#contato" class="nav-cta">Contato</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#sobre" onclick="toggleMenu()">Sobre</a>
+    <a href="#canais" onclick="toggleMenu()">Canais</a>
+    <a href="#eventos" onclick="toggleMenu()">Eventos</a>
+    <a href="#formacao" onclick="toggleMenu()">Formação</a>
+    <a href="#contato" onclick="toggleMenu()">Contato</a>
+  </div>
+
+  <!-- CONTEUDO -->
+  <section id="oficina-documentos">
+    <div class="documentos-header reveal">
+      <div class="section-label">Oficina LPIC</div>
+      <h1 class="section-title">Materiais para <em>download</em></h1>
+      <p class="documentos-intro">
+        Acesse os arquivos disponibilizados pelo LibreUFOP para acompanhar as atividades da Oficina LPIC 
+        e consultar os conteúdos do projeto.
+      </p>
+    </div>
+    <div class="documentos-area">
+      <div class="documentos-area-header">
+        <div class="section-label">LPI 101</div>
+        <h2 class="documentos-area-title">Oficina 101</h2>
+      </div>
+        <div class="documentos-grid">
+            <div class="documento-card reveal">
+                <!-- <div class="documento-icon" aria-hidden="true"></div> -->
+                <div>
+                <div class="documento-tipo">Conteúdo da Aula</div>
+                <h2 class="documento-title">Slides</h2>
+                <p class="documento-desc">Apresentação de slides utilziados em sala.</p>
+                </div>
+                <a class="canal-link canal-btn documento-download" href="feed.xml" download="">
+                Baixar
+                </a>
+            </div>
+    
+            <div class="documento-card reveal reveal-d1">
+                <!-- <div class="documento-icon" aria-hidden="true"></div> -->
+                <div>
+                <div class="documento-tipo">Exercícios</div>
+                <h2 class="documento-title">Canais RSS do LibreUFOP</h2>
+                <p class="documento-desc">Lista de exercícios colocando a mão na massa reforçando o aprendizado.</p>
+                </div>
+                <a class="canal-link canal-btn documento-download" href="feeds.opml" download="">
+                Baixar
+                </a>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(element => observer.observe(element));
+
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900) {
+        document.getElementById('mobileMenu').classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>
