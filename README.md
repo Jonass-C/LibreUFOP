@@ -78,8 +78,8 @@ Mais informações em [creativecommons.org/licenses/by-sa/4.0](https://creativec
 
 # Autor
 
-Projeto desenvolvido por Vinícius "Alochio" Alochio.
+Projeto desenvolvido por Vinícius "[Alochio](https://github.com/Alochio)" Alochio.
 
-Contribuídores: Guilherme "glermFF" Ferreira e Jonas "Jonas-C" Campos
+Contribuidores: Guilherme "[glermFF](https://github.com/glermFF)" Ferreira e Jonas "[Jonass-C](https://github.com/Jonass-C)" Campos
 
 > “Programar liberta!”
