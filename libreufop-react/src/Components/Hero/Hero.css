@@ -1,0 +1,22 @@
+#hero { position: relative; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 3rem; min-height: 100svh; padding: 5.5rem clamp(1.25rem, 6vw, 6rem) 4rem; overflow: hidden; color: var(--white); background: var(--gray-dark); }
+.hero-grid { position: absolute; inset: 0; z-index: 0; background-image: linear-gradient(rgb(192 57 43 / 8%) 1px, transparent 1px), linear-gradient(90deg, rgb(192 57 43 / 8%) 1px, transparent 1px); background-size: 48px 48px; }
+.hero-grid::after { position: absolute; top: -15%; right: -10%; width: 65vw; height: 65vw; content: ''; background: radial-gradient(circle, rgb(192 57 43 / 22%) 0%, transparent 70%); border-radius: 50%; }
+.hero-content { position: relative; z-index: 2; }
+.eyebrow { display: inline-flex; align-items: center; gap: .5rem; max-width: 100%; margin-bottom: 1.2rem; padding: .35rem .85rem; color: #ff6b5b; font-size: clamp(.65rem, 2vw, .78rem); font-weight: 600; letter-spacing: .07em; text-transform: uppercase; background: rgb(192 57 43 / 15%); border: 1px solid rgb(192 57 43 / 40%); border-radius: 100px; animation: fade-up .6s ease both; }
+.eyebrow::before { flex-shrink: 0; width: 6px; height: 6px; content: ''; background: var(--red-light); border-radius: 50%; animation: pulse 2s infinite; }
+.hero-content h1 { margin-bottom: .4rem; color: var(--white); font-size: clamp(2.8rem, 11vw, 7rem); font-weight: 800; line-height: .95; letter-spacing: -.03em; animation: fade-up .6s .1s ease both; }
+.hero-content h1 span { color: var(--red-light); }
+.hero-slogan { margin-bottom: 1.2rem; color: var(--accent); font-size: clamp(.85rem, 3.5vw, 1.4rem); font-weight: 700; letter-spacing: .05em; text-transform: uppercase; animation: fade-up .6s .2s ease both; }
+.hero-subtitle { max-width: 480px; margin-bottom: 2rem; color: rgb(255 255 255 / 65%); font-size: clamp(.92rem, 2.5vw, 1.15rem); font-weight: 300; line-height: 1.7; animation: fade-up .6s .3s ease both; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; animation: fade-up .6s .4s ease both; }
+.button { display: inline-flex; align-items: center; gap: .5rem; padding: .8rem 1.5rem; border-radius: 6px; font-size: clamp(.85rem, 2.5vw, .95rem); font-weight: 600; text-decoration: none; transition: all .25s; }
+.button-primary { color: var(--white); background: var(--red); box-shadow: 0 4px 20px rgb(192 57 43 / 40%); }
+.button-primary:hover { background: var(--red-light); transform: translateY(-2px); box-shadow: 0 8px 28px rgb(192 57 43 / 50%); }
+.button-secondary { color: rgb(255 255 255 / 80%); border: 1px solid rgb(255 255 255 / 20%); }
+.button-secondary:hover { color: var(--white); background: rgb(255 255 255 / 6%); border-color: rgb(255 255 255 / 50%); }
+.hero-mark { position: relative; z-index: 2; display: grid; place-items: center; justify-self: center; width: min(34vw, 410px); aspect-ratio: 1; animation: fade-up .6s .25s ease both; }
+.hero-mark img { z-index: 1; width: 58%; aspect-ratio: 1; object-fit: cover; border: 3px solid rgb(231 76 60 / 45%); border-radius: 50%; box-shadow: 0 8px 32px rgb(192 57 43 / 55%), 0 2px 12px rgb(0 0 0 / 50%); animation: tilt-y 5s ease-in-out infinite; }
+.hero-ring { position: absolute; inset: 5%; border: 1px dashed rgb(192 57 43 / 20%); border-radius: 50%; animation: spin 24s linear infinite; }
+.hero-ring-two { inset: -5%; opacity: .6; animation-duration: 40s; animation-direction: reverse; }
+@media (max-width: 900px) { #hero { grid-template-columns: 1fr; min-height: auto; padding-top: 5.5rem; padding-bottom: 3.5rem; text-align: center; } .hero-content { display: flex; flex-direction: column; align-items: center; } .hero-subtitle { margin-right: auto; margin-left: auto; } .hero-actions { justify-content: center; } .hero-mark { width: min(62vw, 300px); } }
+@media (max-width: 600px) { #hero { padding-top: 5rem; padding-bottom: 3rem; } .hero-actions { flex-direction: column; align-items: center; width: 100%; } .button { justify-content: center; width: 100%; max-width: 320px; } }
