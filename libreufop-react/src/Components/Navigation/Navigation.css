@@ -1,0 +1,21 @@
+.site-nav { position: fixed; top: 0; width: 100%; z-index: 100; display: flex; align-items: center; justify-content: space-between; height: 64px; padding: 0 clamp(1.5rem, 5vw, 4rem); background: rgb(255 255 255 / 95%); border-bottom: 2px solid var(--red); backdrop-filter: blur(12px); }
+.nav-logo { display: inline-flex; align-items: center; gap: .6rem; color: var(--red); font-size: 1.3rem; font-weight: 800; letter-spacing: -.02em; text-decoration: none; }
+.nav-logo img { display: block; width: 32px; height: 32px; object-fit: cover; border: 1.5px solid var(--red); border-radius: 50%; }
+.nav-logo strong { color: var(--gray-dark); }
+.nav-links { display: flex; align-items: center; gap: 2rem; }
+.nav-links a { position: relative; color: var(--gray-mid); font-size: .9rem; font-weight: 500; text-decoration: none; transition: color .2s; }
+.nav-links a:not(.nav-cta)::after { position: absolute; right: 0; bottom: -4px; left: 0; width: 0; height: 2px; content: ''; background: var(--red); transition: width .25s; }
+.nav-links a:hover { color: var(--red); }
+.nav-links a:not(.nav-cta):hover::after { width: 100%; }
+.nav-cta { padding: .45rem 1.2rem; color: var(--white) !important; background: var(--red); border-radius: 4px; font-weight: 600 !important; }
+.nav-cta::after { display: none !important; }
+.nav-cta:hover { background: var(--red-dark); }
+.menu-toggle { display: none; padding: 4px; background: none; border: 0; cursor: pointer; }
+.menu-toggle span { display: block; width: 22px; height: 2px; margin: 4px 0; background: var(--gray-dark); border-radius: 2px; }
+@media (max-width: 900px) {
+  .menu-toggle { display: block; }
+  .nav-links { position: absolute; top: 64px; right: 0; left: 0; display: none; flex-direction: column; align-items: stretch; gap: 1rem; padding: 1.5rem 2rem; background: var(--white); border-bottom: 2px solid var(--red); }
+  .nav-links.is-open { display: flex; }
+  .nav-links a { padding: .5rem 0; }
+  .nav-links .nav-cta { padding: .5rem 0; color: var(--gray-mid) !important; background: none; }
+}

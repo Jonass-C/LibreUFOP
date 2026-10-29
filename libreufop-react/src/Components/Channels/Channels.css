@@ -1,0 +1,16 @@
+#canais { display: flex; flex-direction: column; background: var(--white); }
+.section-heading { max-width: 600px; margin-bottom: 3rem; }
+.section-heading p { color: var(--gray-mid); line-height: 1.8; }
+.channel-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+.channel-card { position: relative; padding: 2.5rem; overflow: hidden; background: var(--white); border: 1px solid rgb(0 0 0 / 8%); border-radius: 8px; transition: all .3s; }
+.channel-card::before { position: absolute; top: 0; right: 0; left: 0; height: 3px; content: ''; background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform .3s; }
+.channel-card:hover { box-shadow: 0 12px 40px rgb(0 0 0 / 10%); transform: translateY(-4px); }
+.channel-card:hover::before { transform: scaleX(1); }
+.channel-icon { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 1.2rem; font-size: 1.4rem; background: rgb(192 57 43 / 10%); border-radius: 10px; }
+.channel-card h3 { margin-bottom: .6rem; color: var(--gray-dark); font-size: 1.15rem; font-weight: 700; }
+.channel-card p { margin-bottom: 1.5rem; color: var(--gray-mid); font-size: .9rem; line-height: 1.7; }
+.card-link, .coming-soon { display: inline-flex; align-items: center; gap: .4rem; color: var(--red); font-size: .85rem; font-weight: 600; text-decoration: none; transition: gap .2s; }
+.card-link:hover { gap: .7rem; }
+.coming-soon { color: var(--gray-mid); }
+@media (max-width: 900px) { .channel-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .channel-grid { grid-template-columns: 1fr; } }

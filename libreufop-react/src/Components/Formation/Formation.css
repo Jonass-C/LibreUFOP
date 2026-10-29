@@ -1,0 +1,10 @@
+#formacao { background: var(--off-white); }
+.formation-section .section-heading p { color: var(--gray-mid); line-height: 1.8; }
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; max-width: 1100px; margin-top: 3rem; }
+.topic-card { display: flex; flex-direction: column; gap: .8rem; padding: 1.8rem 1.5rem; background: var(--white); border: 1px solid rgb(0 0 0 / 6%); border-radius: 6px; transition: all .3s; }
+.topic-card:hover { border-color: var(--red); box-shadow: 0 4px 20px rgb(192 57 43 / 10%); transform: translateY(-2px); }
+.topic-card strong { color: rgb(192 57 43 / 15%); font-size: 2rem; line-height: 1; }
+.topic-card span { color: var(--gray-dark); font-size: 1rem; font-weight: 700; }
+.formation-note { margin-top: 2rem; color: var(--gray-mid); line-height: 1.8; }
+@media (max-width: 900px) { .topic-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .topic-grid { grid-template-columns: 1fr; } }
