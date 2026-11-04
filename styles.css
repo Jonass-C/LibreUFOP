@@ -1115,6 +1115,10 @@ footer {
   margin: 0 auto;
 }
 
+.documentos-area + .documentos-area {
+  margin-top: clamp(4rem, 8vw, 6rem);
+}
+
 .documentos-area-header {
   margin-bottom: 1.5rem;
 }
@@ -1136,6 +1140,12 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
+}
+
+.documentos-grid > .documento-card:only-child {
+  grid-column: 1 / -1;
+  width: calc(50% - 0.75rem);
+  justify-self: center;
 }
 
 .documento-card {
@@ -1379,6 +1389,10 @@ footer {
 
   .documentos-grid {
     grid-template-columns: 1fr;
+  }
+
+  .documentos-grid > .documento-card:only-child {
+    width: 100%;
   }
 
   /* Hero fine-tuning for small phones */
