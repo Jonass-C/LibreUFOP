@@ -1,0 +1,127 @@
+#oficina-documentos {
+  min-height: 100svh;
+  padding: clamp(7rem, 14vw, 10rem) clamp(1.5rem, 6vw, 6rem) 6rem;
+  background: var(--off-white);
+}
+
+.documentos-header {
+  max-width: 720px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.documentos-header .section-label {
+  border-left: 0;
+  border-bottom: 3px solid var(--red);
+  padding: 0 0 .55rem;
+}
+
+.section-title {
+  color: var(--gray-dark);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+}
+
+.section-title em {
+  color: var(--red-light);
+  font-style: normal;
+}
+
+.documentos-intro {
+  max-width: 600px;
+  margin: 1.2rem auto 0;
+  color: var(--gray-mid);
+  line-height: 1.75;
+}
+
+.documentos-area {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.documentos-area-header {
+  margin-bottom: 1.5rem;
+}
+
+.documentos-area-header .section-label {
+  margin-bottom: .65rem;
+}
+
+.documentos-area-title {
+  color: var(--gray-dark);
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  line-height: 1.2;
+}
+
+.documentos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.documento-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+  padding: 2.5rem;
+  border: 1px solid rgb(0 0 0 / 8%);
+  border-radius: 8px;
+  background: var(--white);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.documento-card::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: var(--red);
+  content: '';
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s;
+}
+
+.documento-card:hover {
+  box-shadow: 0 12px 40px rgb(0 0 0 / 10%);
+  transform: translateY(-4px);
+}
+
+.documento-card:hover::before {
+  transform: scaleX(1);
+}
+
+.documento-tipo {
+  margin-bottom: .35rem;
+  color: var(--red);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.documento-title {
+  color: var(--gray-dark);
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+.documento-desc {
+  margin-top: .6rem;
+  color: var(--gray-mid);
+  font-size: .9rem;
+  line-height: 1.65;
+}
+
+.documento-download {
+  align-self: flex-start;
+  cursor: default;
+  opacity: .7;
+}
+
+@media (max-width: 700px) {
+  .documentos-grid {
+    grid-template-columns: 1fr;
+  }
+}

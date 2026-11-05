@@ -19,7 +19,7 @@ function Channels() {
         <Channel title="Podcast" icon="🎙️" description="Episódios com discussões aprofundadas, entrevistas e análises sobre software livre, cultura hacker e soberania digital." />
         <Channel title="Newsletter" icon="✉️" description="Receba novidades, tutoriais, ferramentas livres e informações sobre os próximos eventos." />
         <Channel title="Feed RSS" icon="📡" description="Atualizações em tempo real, de forma descentralizada e sem depender de algoritmos." link={`${import.meta.env.BASE_URL}feed.xml`} action="Abrir Feed" />
-        <Channel title="Base de Conhecimento Linux" icon="🐧" description="Tutoriais, guias, documentação e dicas práticas para iniciantes e usuários avançados." link={`${import.meta.env.BASE_URL}../oficina.html`} action="Oficina LPIC" />
+        <Channel title="Base de Conhecimento Linux" icon="🐧" description="Tutoriais, guias, documentação e dicas práticas para iniciantes e usuários avançados." link={`${import.meta.env.BASE_URL}#oficina`} action="Oficina LPIC" />
       </div>
     </section>
   );

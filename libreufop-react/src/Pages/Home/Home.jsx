@@ -6,6 +6,7 @@ import Footer from '../../Components/Footer/Footer';
 import Formation from '../../Components/Formation/Formation';
 import Hero from '../../Components/Hero/Hero';
 import Navigation from '../../Components/Navigation/Navigation';
+import './Home.css';
 
 function Home() {
   useEffect(() => {
@@ -28,7 +29,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="app-shell">
+    <div className="app-shell home-page">
       <Navigation />
       <main>
         <Hero />
