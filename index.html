@@ -7,7 +7,7 @@
   <title>LibreUFOP – Software Livre, Formação e Integração com a Comunidade</title>
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/index.css">
-  <link rel="icon" type="image/png" sizes="16x16" href="docs/LibreUFOP_logo.jpeg">
+  <link rel="icon" type="image/png" sizes="16x16" href="docs/public/imgs/LibreUFOP_logo.jpeg">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
   <nav>
     <a href="#" class="nav-logo">
       <div class="nav-logo">
-        <img src="docs/LibreUFOP_logo.jpeg" alt="Logo LibreUFOP" class="logo-img" />
+        <img src="docs/public/imgs/LibreUFOP_logo.jpeg" alt="Logo LibreUFOP" class="logo-img" />
         <p>
           Libre<span>UFOP</span>
         </p>
@@ -72,7 +72,7 @@
         <div class="hero-badge-ring"></div>
         <div class="hero-badge-ring2"></div>
         <div class="hero-badge-main">
-          <img src="docs/LibreUFOP_logo.jpeg" alt="LibreUFOP Logo" class="hero-logo-img" />
+          <img src="docs/public/imgs/LibreUFOP_logo.jpeg" alt="LibreUFOP Logo" class="hero-logo-img" />
         </div>
         <div class="hero-dot hero-dot-1"></div>
         <div class="hero-dot hero-dot-2"></div>
@@ -178,7 +178,8 @@
           informações sobre nossos próximos eventos e atividades.
         </p>
 
-        <a class="canal-link canal-btn" href="https://substack.com/@libreufoptest" target="_blank" rel="noopener noreferrer"> Abrir Newsletter </a>
+        <span class="canal-link">Em breve</span>
+        <!-- <a class="canal-link canal-btn" href="https://substack.com/@libreufoptest" target="_blank" rel="noopener noreferrer"> Abrir Newsletter </a> -->
       </div>
 
       <div class="canal-card reveal reveal-d2">
@@ -192,8 +193,8 @@
         </p>
 
         <div class="btn-label">
-          <a class="canal-link canal-btn" href="feed.xml" target="_blank" rel="noopener noreferrer"> Abrir Feed </a>
-          <a class="canal-link canal-btn" href="feeds.opml" download="RSS_LibreUFOP.opml"> Baixar RSS (.opml) </a>
+          <!-- <a class="canal-link canal-btn" href="docs/public/feed.xml" target="_blank" rel="noopener noreferrer"> Abrir Feed </a> -->
+          <a class="canal-link canal-btn" href="docs/public/feeds.opml" download="RSS_LibreUFOP.opml"> Baixar RSS (.opml) </a>
         </div>
       </div>
 
@@ -221,168 +222,112 @@
     </div>
 
     <div class="eventos-grid">
-
-      <!-- REALIZADOS -->
-      <div class="reveal">
-        <div class="eventos-col-title">● Realizados</div>
-
-        <!-- Debian Day 25 -->
-        <a href="https://wiki.debian.org/DebianDay/2025/Brazil/JoaoMonlevade" target="_blank" rel="noopener noreferrer"
-          class="evento-card destaque">
-
-          <div class="evento-data">16 de Agosto · 2025 · João Monlevade</div>
-
-          <div class="evento-nome">Debian Day 2025</div>
-
-          <div class="evento-desc">
-            Celebração do aniversário do Projeto Debian realizada no Laboratório H102 do
-            ICEA/UFOP — com Festival de Instalação, Lightning Talks e palestras sobre o
-            ecossistema Debian GNU/Linux.
-          </div>
-
-          <div class="evento-talks">
-            <span class="evento-talk">Festival de Instalação</span>
-            <span class="evento-talk">Lightning Talks</span>
-            <span class="evento-talk">Debian GNU/Linux com C</span>
-            <span class="evento-talk">Projeto Debian</span>
-          </div>
-
-          <div class="evento-break">
-
-            <div class="evento-data">
-              Programação · 16/08/2025 · 8h–13h
+      <div class="eventos-row">
+        <div class="eventos-col-title reveal">● Realizados</div>
+        <div class="eventos-cards">
+          <details class="evento-card destaque reveal reveal-d1">
+            <summary class="evento-summary">
+              <span class="evento-data">16 de Agosto · 2025 · João Monlevade</span>
+              <span class="evento-nome">Debian Day 2025</span>
+              <span class="evento-desc">Celebração do Projeto Debian com festival de instalação, lightning talks e palestras no ICEA/UFOP.</span>
+              <span class="evento-talks">
+                <span class="evento-talk">Festival de Instalação</span>
+                <span class="evento-talk">Lightning Talks</span>
+                <span class="evento-talk">Debian GNU/Linux com C</span>
+                <span class="evento-talk">Projeto Debian</span>
+              </span>
+              <span class="evento-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="evento-details">
+              <div class="evento-break">
+                <div class="evento-data">Programação · 16/08/2025 · 8h–13h</div>
+                <div class="evento-desc">
+                  <span class="evento-horario">8h</span> Abertura e Festival de Instalação<br>
+                  <span class="evento-horario">9h30</span> Palestra — Debian GNU/Linux com C · Igor Muzetti<br>
+                  <span class="evento-horario">10h30</span> Lightning Talks — Mostre seu Debian · Estudantes<br>
+                  <span class="evento-horario">11h</span> Palestra — O projeto Debian quer você! · Paulo Santana<br>
+                  <span class="evento-horario">12h30</span> Encerramento e confraternização
+                </div>
+                <div class="evento-local">📍 UFOP/ICEA · João Monlevade — MG</div>
+              </div>
+              <a class="evento-link" href="https://wiki.debian.org/DebianDay/2025/Brazil/JoaoMonlevade" target="_blank" rel="noopener noreferrer">Página do evento ↗</a>
             </div>
+          </details>
 
-            <div class="evento-desc">
-              <span style="color:rgba(192,57,43,0.8); font-weight:600;">8h</span>
-              Abertura e Festival de Instalação<br>
-
-              <span style="color:rgba(192,57,43,0.8); font-weight:600;">9h30</span>
-              Palestra — Debian GNU/Linux com C · Igor Muzetti<br>
-
-              <span style="color:rgba(192,57,43,0.8); font-weight:600;">10h30</span>
-              Lightning Talks — Mostre seu Debian · Estudantes<br>
-
-              <span style="color:rgba(192,57,43,0.8); font-weight:600;">11h</span>
-              Palestra — O projeto Debian quer você! · Paulo Santana<br>
-
-              <span style="color:rgba(192,57,43,0.8); font-weight:600;">12h30</span>
-              Encerramento e confraternização
+          <details class="evento-card destaque reveal reveal-d2">
+            <summary class="evento-summary">
+              <span class="evento-data">25 de Abril · 2026 · João Monlevade</span>
+              <span class="evento-nome">FLISOL 2026</span>
+              <span class="evento-desc">Festival Latino-americano de Instalação de Software Livre realizado pelo LibreUFOP no campus ICEA.</span>
+              <span class="evento-talks">
+                <span class="evento-talk">Redes Federadas</span>
+                <span class="evento-talk">Soberania Digital na Educação</span>
+                <span class="evento-talk">GNU/Linux</span>
+                <span class="evento-talk">Installfest</span>
+                <span class="evento-talk">Software Livre Criativo</span>
+                <span class="evento-talk">Soberania Digital</span>
+              </span>
+              <span class="evento-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="evento-details">
+              <div class="evento-break">
+                <div class="evento-data">Programação · 25/04/2026 · 8h–17h</div>
+                <div class="evento-desc">
+                  <span class="evento-horario">8h00</span> Boas-vindas — Wagner Ragi (Diretor ICEA) · Igor Muzetti (LECoMP)<br>
+                  <span class="evento-horario">8h15</span> Festival de Instalação de Software Livre · Igor Muzetti<br>
+                  <span class="evento-horario">9h45</span> Software livre para profissionais criativos · Marcello de Souza · Libre Labs<br>
+                  <span class="evento-horario">11h00</span> Programar liberta · Blau Araújo · DebXP<br>
+                  <span class="evento-horario">13h30</span> Software livre e soberania digital na rede federal · Aluizio Neto (IFMG)<br>
+                  <span class="evento-horario">14h45</span> Redes federadas: além das big techs · Fred Guimarães · Tecnofeudália<br>
+                  <span class="evento-horario">16h00</span> A conquista do conhecimento com GNU/Linux · Prof. Kretcheu
+                </div>
+                <div class="evento-local">📍 UFOP/ICEA · João Monlevade — MG</div>
+              </div>
+              <a class="evento-link" href="https://flisol.info/FLISOL2026/Brasil/JoaoMonlevade" target="_blank" rel="noopener noreferrer">Página do evento ↗</a>
             </div>
+          </details>
 
-            <div class="evento-local">
-              📍 UFOP/ICEA · João Monlevade — MG
+          <details class="evento-card cancelado reveal reveal-d3">
+            <summary class="evento-summary">
+              <span class="evento-data">04 de Setembro · 2026 · João Monlevade</span>
+              <span class="evento-nome">Debian Day 2026</span>
+              <span class="evento-desc">Celebração anual do Projeto Debian. Esta edição foi cancelada.</span>
+              <span class="evento-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="evento-details">
+              <div class="evento-desc">O encontro teria instalação, tutoriais e discussões sobre a distribuição GNU/Linux e sua comunidade.</div>
+              <div class="evento-talks">
+                <span class="evento-talk">Debian GNU/Linux</span>
+                <span class="evento-talk">Empacotamento</span>
+                <span class="evento-talk">Comunidade</span>
+              </div>
+              <a class="evento-link" href="https://wiki.debian.org/DebianDay/2026/Brazil/Jo%C3%A3o%20Monlevade" target="_blank" rel="noopener noreferrer">Página do evento ↗</a>
             </div>
-
-          </div>
-        </a>
-
-        <!-- FLISOL -->
-        <a href="https://flisol.info/FLISOL2026/Brasil/JoaoMonlevade" target="_blank" rel="noopener noreferrer"
-          class="evento-card destaque" style="display:block;">
-
-          <div class="evento-data">25 de Abril · 2026 · João Monlevade</div>
-
-          <div class="evento-nome">FLISOL 2026</div>
-
-          <div class="evento-desc">
-            Festival Latino-americano de Instalação de Software Livre — edição realizada
-            pelo LibreUFOP no campus ICEA, com palestras, installfest e atividades para
-            toda a comunidade.
-          </div>
-
-          <div class="evento-talks">
-            <span class="evento-talk">Redes Federadas</span>
-            <span class="evento-talk">Soberania Digital na Educação</span>
-            <span class="evento-talk">GNU/Linux</span>
-            <span class="evento-talk">Installfest</span>
-            <span class="evento-talk">Software Livre Criativo</span>
-            <span class="evento-talk">Soberania Digital</span>
-          </div>
-
-          <div class="evento-break">
-
-            <div class="evento-data">
-              Programação · 25/04/2026 · 8h–17h
-            </div>
-
-            <div style="font-size:0.78rem; color:rgba(255,255,255,0.45); line-height:1.9;">
-
-              <span style="color:rgba(192,57,43,0.8); font-weight:600;">8h00</span>
-              Boas-vindas — Wagner Ragi (Diretor ICEA) · Igor Muzetti (LECoMP)<br>
-
-              <span style="color:rgba(192,57,43,0.8); font-weight:600;">8h15</span>
-              Festival de Instalação de Software Livre · Igor Muzetti<br>
-
-              <span style="color:rgba(192,57,43,0.8); font-weight:600;">9h45</span>
-              Software livre para profissionais criativos · Marcello de Souza · Libre Labs<br>
-
-              <span style="color:rgba(192,57,43,0.8); font-weight:600;">11h00</span>
-              Programar liberta · Blau Araújo · DebXP<br>
-
-              <span style="color:rgba(192,57,43,0.8); font-weight:600;">13h30</span>
-              Software livre e soberania digital na rede federal · Aluizio Neto (IFMG)<br>
-
-              <span style="color:rgba(192,57,43,0.8); font-weight:600;">14h45</span>
-              Redes federadas: além das big techs · Fred Guimarães · Tecnofeudália<br>
-
-              <span style="color:rgba(192,57,43,0.8); font-weight:600;">16h00</span>
-              A conquista do conhecimento com GNU/Linux · Prof. Kretcheu
-            </div>
-
-            <div class="evento-local">
-              📍 UFOP/ICEA · João Monlevade — MG
-            </div>
-
-          </div>
-        </a>
-
-        <!-- Debian Day 26 -->
-        <a href="https://wiki.debian.org/DebianDay/2026/Brazil/Jo%C3%A3o%20Monlevade" target="_blank" rel="noopener noreferrer"
-          class="evento-card cancelado" style="margin-bottom:1rem; display:block;">
-
-          <div class="evento-data">04 de setembro · 2026 · João Monlevade</div>
-
-          <div class="evento-nome" style="text-decoration: line-through; color: #a1a1aa;">Debian Day 2026</div>
-
-          <div class="evento-desc">
-            Celebração anual do nascimento do Projeto Debian, com instalação,
-            tutoriais e discussões sobre a distribuição GNU/Linux mais influente
-            da história.
-          </div>
-
-          <div class="evento-talks">
-            <span class="evento-talk">Debian GNU/Linux</span>
-            <span class="evento-talk">Empacotamento</span>
-            <span class="evento-talk">Comunidade</span>
-          </div>
-        </a>
+          </details>
+        </div>
       </div>
 
-      <!-- FUTUROS -->
-      <div class="reveal reveal-d1">
-        <div class="eventos-col-title">◌ Em breve</div>
-
-        <div class="evento-card futuro">
-          <div class="evento-data">Em breve · 2027</div>
-
-          <div class="evento-nome">DevOps Day</div>
-
-          <div class="evento-desc">
-            Evento com foco em cultura DevOps, ferramentas abertas de CI/CD,
-            containers, automação e infraestrutura como código.
-          </div>
-
-          <div class="evento-talks">
-            <span class="evento-talk">CI/CD</span>
-            <span class="evento-talk">Containers</span>
-            <span class="evento-talk">Linux</span>
-            <span class="evento-talk">Automação</span>
-          </div>
+      <div class="eventos-row">
+        <div class="eventos-col-title reveal">◌ Previstos</div>
+        <div class="eventos-cards eventos-cards-future">
+          <details class="evento-card futuro reveal reveal-d1">
+            <summary class="evento-summary">
+              <span class="evento-data">Em breve · 2027</span>
+              <span class="evento-nome">DevOps Day</span>
+              <span class="evento-desc">Encontro sobre cultura DevOps, automação e infraestrutura aberta.</span>
+              <span class="evento-talks">
+                <span class="evento-talk">CI/CD</span>
+                <span class="evento-talk">Containers</span>
+                <span class="evento-talk">Linux</span>
+                <span class="evento-talk">Automação</span>
+              </span>
+              <span class="evento-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="evento-details">
+              <div class="evento-desc">O evento abordará ferramentas abertas de CI/CD, containers, Linux e infraestrutura como código. Data, programação e local serão divulgados em breve.</div>
+            </div>
+          </details>
         </div>
-
-        <div class="evento-break"></div>
-
       </div>
     </div>
   </section>
@@ -498,7 +443,7 @@
           <li><a href="mailto:libreufop@ufop.edu.br">libreufop@ufop.edu.br</a></li>
           <li><a href="https://ufop.br" target="_blank" rel="noopener noreferrer">ufop.br</a></li>
           <li><a href="https://substack.com/@libreufoptest">Newsletter</a></li>
-          <li><a href="feed.xml" target="_blank" rel="noopener noreferrer">Feed RSS</a></li>
+          <li><a href="docs/public/feed.xml" target="_blank" rel="noopener noreferrer">Feed RSS</a></li>
           <li><a href="https://github.com/lecompufop/LibreUFOP" target="_blank" rel="noopener noreferrer">GitHub</a></li>
           <li><a href="https://t.me/libreufop" target="_blank" rel="noopener noreferrer">Telegram</a></li>
         </ul>
@@ -508,7 +453,7 @@
       <p>© 2026 LibreUFOP · Conteúdo licenciado sob <a href="https://creativecommons.org/licenses/by-sa/4.0/"
           target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></p>
       <div class="ufop-badge">
-        <img src="docs/ufop-logo.jpg" alt="Logo UFOP" class="ufop-badge-img" />
+        <img src="docs/public/imgs/ufop-logo.jpg" alt="Logo UFOP" class="ufop-badge-img" />
         <span><strong>UFOP</strong> · Universidade Federal de Ouro Preto</span>
       </div>
     </div>
@@ -521,6 +466,59 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
     }, { threshold: 0.12 });
     reveals.forEach(el => observer.observe(el));
+
+    const eventoCards = document.querySelectorAll('.evento-card');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    eventoCards.forEach(card => {
+      const summary = card.querySelector('.evento-summary');
+      const details = card.querySelector('.evento-details');
+      let animation;
+
+      summary.addEventListener('click', event => {
+        event.preventDefault();
+
+        const isClosing = card.dataset.expansion === 'closing';
+        const shouldOpen = !card.open || isClosing;
+
+        if (prefersReducedMotion) {
+          card.open = shouldOpen;
+          card.removeAttribute('data-expansion');
+          return;
+        }
+
+        const currentHeight = details.getBoundingClientRect().height;
+        animation?.cancel();
+
+        if (!shouldOpen) {
+          card.dataset.expansion = 'closing';
+          animation = details.animate([
+            { height: `${currentHeight}px`, opacity: 1, transform: 'translateY(0)' },
+            { height: '0px', opacity: 0, transform: 'translateY(-8px)' }
+          ], { duration: 260, easing: 'ease-in' });
+
+          animation.onfinish = () => {
+            card.open = false;
+            card.removeAttribute('data-expansion');
+            animation = null;
+          };
+          return;
+        }
+
+        card.open = true;
+        card.dataset.expansion = 'opening';
+        const expandedHeight = details.getBoundingClientRect().height;
+        animation = details.animate([
+          { height: `${currentHeight}px`, opacity: 0, transform: 'translateY(-8px)' },
+          { height: `${expandedHeight}px`, opacity: 1, transform: 'translateY(0)' }
+        ], { duration: 320, easing: 'ease-out' });
+
+        animation.onfinish = () => {
+          card.removeAttribute('data-expansion');
+          animation = null;
+        };
+      });
+    });
 
     // Mobile menu
     function toggleMenu() {

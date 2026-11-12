@@ -1,6 +1,6 @@
 /* ── HERO ── */
 #hero {
-  min-height: 100svh;
+  min-height: 91svh;
   background: var(--gray-dark);
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -321,11 +321,12 @@
 
 .sobre-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  align-items: start;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(6rem, 8vw, 8rem);
+  max-width: none;
+  width: calc(100% + clamp(0rem, 3vw, 2rem));
+  margin: 0;
 }
 
 .sobre-text p {
@@ -372,12 +373,13 @@
 
 .sobre-visual {
   position: relative;
+  margin-top: 2.1rem;
 }
 
 .sobre-card-main {
   background: var(--gray-dark);
   border-radius: 8px;
-  padding: 2.5rem;
+  padding: 5.25rem;
   color: var(--white);
   position: relative;
   overflow: hidden;
@@ -558,10 +560,16 @@
 
 .eventos-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 2.5rem;
   margin-top: 3rem;
-  max-width: 1100px;
+}
+
+.eventos-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  justify-items: start;
+  gap: clamp(1rem, 1.5vw, 1.5rem);
 }
 
 .eventos-col-title {
@@ -576,14 +584,16 @@
 }
 
 .evento-card {
+  width: 90%;
+  min-height: 15.5rem;
+  min-width: 0;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-  transition: background 0.25s;
+  padding: 1.25rem;
+  transition: background 0.25s, border-color 0.25s, box-shadow 0.25s;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .evento-card:hover {
@@ -595,32 +605,70 @@
   background: rgba(192, 57, 43, 0.08);
 }
 
-/* Card clicável — eventos realizados */
-a.evento-card {
-  text-decoration: none;
-  color: inherit;
+.evento-summary {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 16.5rem;
+  min-width: 0;
+  padding-bottom: 1.75rem;
   cursor: pointer;
-  display: block;
+  list-style: none;
+  overflow-wrap: anywhere;
 }
 
-a.evento-card:hover {
-  background: rgba(255, 255, 255, 0.1) !important;
-  border-color: rgba(192, 57, 43, 0.6) !important;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  transition: all 0.25s;
+.evento-summary::-webkit-details-marker {
+  display: none;
 }
 
-a.evento-card .evento-nome::after {
-  content: ' ↗';
-  font-size: 0.8em;
-  opacity: 0.5;
+.evento-summary:focus-visible {
+  outline: 2px solid var(--red-light);
+  outline-offset: 4px;
+}
+
+.evento-toggle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  place-items: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: var(--white);
+  line-height: 1;
+  transition: transform 0.24s ease;
+}
+
+.evento-card[open] .evento-toggle {
+  transform: rotate(45deg);
+}
+
+.evento-details {
+  min-width: 0;
+  padding-top: 0.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.evento-link {
+  display: inline-flex;
+  margin-top: 1rem;
+  color: var(--red-light);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.evento-link:hover {
+  color: var(--white);
 }
 
 .evento-card.destaque::before {
   content: 'REALIZADO';
   position: absolute;
-  top: 1rem;
+  top: 0.25rem;
   right: 1rem;
   font-size: 0.65rem;
   font-weight: 700;
@@ -634,7 +682,7 @@ a.evento-card .evento-nome::after {
 .evento-card.futuro::before {
   content: 'EM BREVE';
   position: absolute;
-  top: 1rem;
+  top: 0.25rem;
   right: 1rem;
   font-size: 0.65rem;
   font-weight: 700;
@@ -653,7 +701,7 @@ a.evento-card .evento-nome::after {
 .evento-card.cancelado::before {
   content: 'CANCELADO';
   position: absolute;
-  top: 1rem;
+  top: 0.25rem;
   right: 1rem;
   font-size: 0.65rem;
   font-weight: 700;
@@ -674,6 +722,12 @@ a.evento-card .evento-nome::after {
   color: rgba(255, 255, 255, 0.4);
   font-weight: 500;
   margin-bottom: 0.4rem;
+  overflow-wrap: anywhere;
+}
+
+.evento-horario {
+  color: rgba(192, 57, 43, 0.8);
+  font-weight: 600;
 }
 
 .evento-nome {
@@ -684,10 +738,12 @@ a.evento-card .evento-nome::after {
 }
 
 .evento-desc {
+  max-width: 100%;
   font-size: 0.85rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 0.8rem;
+  overflow-wrap: anywhere;
 }
 
 .evento-local{
@@ -703,12 +759,14 @@ a.evento-card .evento-nome::after {
 }
 
 .evento-talk {
+  max-width: 100%;
   font-size: 0.73rem;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.55);
   padding: 0.2rem 0.6rem;
   border-radius: 100px;
+  overflow-wrap: anywhere;
 }
 
 .evento-break{
@@ -774,8 +832,10 @@ a.evento-card .evento-nome::after {
   .hero-actions { justify-content: center; }
   .hero-visual { display: flex; margin: 0 auto; }
   .hero-badge-stack { width: clamp(160px, 50vw, 260px); }
-  .sobre-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .canais-grid, .eventos-grid { grid-template-columns: 1fr; }
+  .sobre-grid { grid-template-columns: 1fr; gap: 2.5rem; width: 100%; }
+  .sobre-visual { margin-top: 0; }
+  .canais-grid { grid-template-columns: 1fr; }
+  .eventos-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .formacao-grid { grid-template-columns: 1fr 1fr; }
 }
 
@@ -786,10 +846,23 @@ a.evento-card .evento-nome::after {
   .hero-actions { flex-direction: column; align-items: center; }
   .btn-primary, .btn-secondary { width: 100%; justify-content: center; max-width: 320px; }
   .sobre-stats { grid-template-columns: 1fr 1fr; }
+  .eventos-cards { grid-template-columns: 1fr; }
   .formacao-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 380px) {
   .hero-eyebrow { font-size: 0.6rem; letter-spacing: 0.04em; }
   .hero-badge-stack { width: 130px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #eventos .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .evento-toggle {
+    transition: none;
+  }
 }
