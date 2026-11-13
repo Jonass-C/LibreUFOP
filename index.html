@@ -50,7 +50,7 @@
     <div class="hero-content">
       <div class="hero-eyebrow">ICEA · UFOP · João Monlevade</div>
       <h1 class="hero-title">Libre<em>UFOP</em></h1>
-      <p class="hero-slogan">Programar Liberta!</p>
+      <p class="hero-slogan">Tecnologia livre, conhecimento compartilhado</p>
       <p class="hero-subtitle">Software Livre, Formação e Integração com a Comunidade. Promovendo soberania digital e
         conhecimento aberto na Universidade Federal de Ouro Preto.</p>
       <div class="hero-actions">
@@ -122,18 +122,18 @@
         </div>
       </div>
 
-      <div class="sobre-visual reveal reveal-d2">
+      <div class="sobre-visual reveal reveal--delay-2">
         <div class="sobre-card-main">
           <div class="sobre-card-logo">Libre<span>UFOP</span></div>
           <div class="sobre-card-inst">Extensão Universitária · UFOP</div>
           <div class="sobre-card-tags">
-            <span class="tag red">GNU/Linux</span>
+            <span class="tag tag--red">GNU/Linux</span>
             <span class="tag">Software Livre</span>
             <span class="tag">Redes Federadas</span>
-            <span class="tag red">Soberania Digital</span>
+            <span class="tag tag--red">Soberania Digital</span>
             <span class="tag">DevOps</span>
             <span class="tag">Comunidade</span>
-            <span class="tag red">FLISOL</span>
+            <span class="tag tag--red">FLISOL</span>
             <span class="tag">Debian</span>
             <span class="tag">Criatividade</span>
           </div>
@@ -168,7 +168,7 @@
         <span class="canal-link">Em breve</span>
       </div>
 
-      <div class="canal-card reveal reveal-d1">
+      <div class="canal-card reveal reveal--delay-1">
         <div class="canal-icon">✉️</div>
 
         <div class="canal-title">Newsletter</div>
@@ -182,7 +182,7 @@
         <!-- <a class="canal-link canal-btn" href="https://substack.com/@libreufoptest" target="_blank" rel="noopener noreferrer"> Abrir Newsletter </a> -->
       </div>
 
-      <div class="canal-card reveal reveal-d2">
+      <div class="canal-card reveal reveal--delay-2">
         <div class="canal-icon">📡</div>
 
         <div class="canal-title">Feed RSS</div>
@@ -225,7 +225,7 @@
       <div class="eventos-row">
         <div class="eventos-col-title reveal">● Realizados</div>
         <div class="eventos-cards">
-          <details class="evento-card destaque reveal reveal-d1">
+          <details class="evento-card evento-card--destaque reveal reveal--delay-1">
             <summary class="evento-summary">
               <span class="evento-data">16 de Agosto · 2025 · João Monlevade</span>
               <span class="evento-nome">Debian Day 2025</span>
@@ -254,7 +254,7 @@
             </div>
           </details>
 
-          <details class="evento-card destaque reveal reveal-d2">
+          <details class="evento-card evento-card--destaque reveal reveal--delay-2">
             <summary class="evento-summary">
               <span class="evento-data">25 de Abril · 2026 · João Monlevade</span>
               <span class="evento-nome">FLISOL 2026</span>
@@ -287,7 +287,7 @@
             </div>
           </details>
 
-          <details class="evento-card cancelado reveal reveal-d3">
+          <details class="evento-card evento-card--cancelado reveal reveal--delay-3">
             <summary class="evento-summary">
               <span class="evento-data">04 de Setembro · 2026 · João Monlevade</span>
               <span class="evento-nome">Debian Day 2026</span>
@@ -310,7 +310,7 @@
       <div class="eventos-row">
         <div class="eventos-col-title reveal">◌ Previstos</div>
         <div class="eventos-cards eventos-cards-future">
-          <details class="evento-card futuro reveal reveal-d1">
+          <details class="evento-card evento-card--futuro reveal reveal--delay-1">
             <summary class="evento-summary">
               <span class="evento-data">Em breve · 2027</span>
               <span class="evento-nome">DevOps Day</span>
@@ -353,7 +353,7 @@
         </div>
       </div>
 
-      <div class="formacao-item reveal reveal-d1">
+      <div class="formacao-item reveal reveal--delay-1">
         <div class="formacao-num">02</div>
 
         <div class="formacao-title">
@@ -361,7 +361,7 @@
         </div>
       </div>
 
-      <div class="formacao-item reveal reveal-d2">
+      <div class="formacao-item reveal reveal--delay-2">
         <div class="formacao-num">03</div>
 
         <div class="formacao-title">
@@ -377,7 +377,7 @@
         </div>
       </div>
 
-      <div class="formacao-item reveal reveal-d1">
+      <div class="formacao-item reveal reveal--delay-1">
         <div class="formacao-num">05</div>
 
         <div class="formacao-title">
@@ -385,7 +385,7 @@
         </div>
       </div>
 
-      <div class="formacao-item reveal reveal-d2">
+      <div class="formacao-item reveal reveal--delay-2">
         <div class="formacao-num">06</div>
 
         <div class="formacao-title">
@@ -401,7 +401,7 @@
         </div>
       </div>
 
-      <div class="formacao-item reveal reveal-d1">
+      <div class="formacao-item reveal reveal--delay-1">
         <div class="formacao-num">08</div>
 
         <div class="formacao-title">
@@ -463,7 +463,7 @@
     // Reveal on scroll
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('reveal--visible'); } });
     }, { threshold: 0.12 });
     reveals.forEach(el => observer.observe(el));
 
@@ -522,13 +522,13 @@
 
     // Mobile menu
     function toggleMenu() {
-      document.getElementById('mobileMenu').classList.toggle('open');
+      document.getElementById('mobileMenu').classList.toggle('mobile-menu--open');
     }
 
     // Close mobile menu on resize
     window.addEventListener('resize', () => {
       if (window.innerWidth > 900) {
-        document.getElementById('mobileMenu').classList.remove('open');
+        document.getElementById('mobileMenu').classList.remove('mobile-menu--open');
       }
     });
 

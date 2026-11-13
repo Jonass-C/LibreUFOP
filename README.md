@@ -1,5 +1,5 @@
 <div align='center'>
-  <img src="docs/LibreUFOP_logo.jpeg" alt="LibreUFOP" width="200">
+  <img src="docs/public/imgs/LibreUFOP_logo.jpeg" alt="LibreUFOP" width="300" height="280">
   <br><br>
   <h1>LibreUFOP</h1>
 </div>
@@ -82,4 +82,4 @@ Projeto desenvolvido por Vinícius "[Alochio](https://github.com/Alochio)" Aloch
 
 Contribuidores: Guilherme "[glermFF](https://github.com/glermFF)" Ferreira e Jonas "[Jonass-C](https://github.com/Jonass-C)" Campos
 
-> “Programar liberta!”
+> "Tecnologia livre, conhecimento compartilhado”

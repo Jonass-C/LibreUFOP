@@ -79,7 +79,7 @@
   background: var(--white);
 }
 
-.documento-card::before{
+.documento-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -97,7 +97,7 @@
   transform: translateY(-4px);
 }
 
-.documento-card:hover::before{
+.documento-card:hover::before {
   transform: scaleX(1);
 }
 
@@ -152,6 +152,11 @@
 
 /* Oficina responsive layout */
 @media (max-width: 600px) {
-  .documentos-grid { grid-template-columns: 1fr; }
-  .documentos-grid > .documento-card:only-child { width: 100%; }
+  .documentos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .documentos-grid > .documento-card:only-child {
+    width: 100%;
+  }
 }

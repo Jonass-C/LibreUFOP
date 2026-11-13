@@ -68,7 +68,7 @@
                 </a>
             </div>
 
-            <div class="documento-card reveal reveal-d1">
+            <div class="documento-card reveal reveal--delay-1">
                 <div>
                 <div class="documento-tipo">Exercícios</div>
                 <h2 class="documento-title">Listas de Exercícios</h2>
@@ -145,18 +145,18 @@
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
+        if (entry.isIntersecting) entry.target.classList.add('reveal--visible');
       });
     }, { threshold: 0.12 });
     reveals.forEach(element => observer.observe(element));
 
     function toggleMenu() {
-      document.getElementById('mobileMenu').classList.toggle('open');
+      document.getElementById('mobileMenu').classList.toggle('mobile-menu--open');
     }
 
     window.addEventListener('resize', () => {
       if (window.innerWidth > 900) {
-        document.getElementById('mobileMenu').classList.remove('open');
+        document.getElementById('mobileMenu').classList.remove('mobile-menu--open');
       }
     });
   </script>
