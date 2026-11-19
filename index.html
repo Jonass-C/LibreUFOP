@@ -198,7 +198,8 @@
         </div>
       </div>
 
-      <div class="canal-card reveal">
+      <div class="canal-card canal-card--oficina reveal">
+        <span class="canal-ribbon">Novo Encontro - 01/12</span>
         <div class="canal-icon">🐧</div>
 
         <div class="canal-title">Base de Conhecimento Linux</div>
@@ -225,8 +226,8 @@
       <div class="eventos-row">
         <div class="eventos-col-title reveal">● Realizados</div>
         <div class="eventos-cards">
-          <details class="evento-card evento-card--destaque reveal reveal--delay-1">
-            <summary class="evento-summary">
+          <div class="evento-card evento-card--destaque reveal reveal--delay-1">
+            <div class="evento-summary">
               <span class="evento-data">16 de Agosto · 2025 · João Monlevade</span>
               <span class="evento-nome">Debian Day 2025</span>
               <span class="evento-desc">Celebração do Projeto Debian com festival de instalação, lightning talks e palestras no ICEA/UFOP.</span>
@@ -236,10 +237,10 @@
                 <span class="evento-talk">Debian GNU/Linux com C</span>
                 <span class="evento-talk">Projeto Debian</span>
               </span>
-              <span class="evento-toggle" aria-hidden="true">+</span>
-            </summary>
-            <div class="evento-details">
-              <div class="evento-break">
+              <button class="evento-toggle" type="button" aria-label="Mostrar informações do Debian Day 2025" aria-expanded="false" aria-controls="evento-details-debian-day-2025"></button>
+            </div>
+            <div class="evento-details" id="evento-details-debian-day-2025" hidden>
+              
                 <div class="evento-data">Programação · 16/08/2025 · 8h–13h</div>
                 <div class="evento-desc">
                   <span class="evento-horario">8h</span> Abertura e Festival de Instalação<br>
@@ -249,13 +250,13 @@
                   <span class="evento-horario">12h30</span> Encerramento e confraternização
                 </div>
                 <div class="evento-local">📍 UFOP/ICEA · João Monlevade — MG</div>
-              </div>
+              
               <a class="evento-link" href="https://wiki.debian.org/DebianDay/2025/Brazil/JoaoMonlevade" target="_blank" rel="noopener noreferrer">Página do evento ↗</a>
             </div>
-          </details>
+          </div>
 
-          <details class="evento-card evento-card--destaque reveal reveal--delay-2">
-            <summary class="evento-summary">
+          <div class="evento-card evento-card--destaque reveal reveal--delay-2">
+            <div class="evento-summary">
               <span class="evento-data">25 de Abril · 2026 · João Monlevade</span>
               <span class="evento-nome">FLISOL 2026</span>
               <span class="evento-desc">Festival Latino-americano de Instalação de Software Livre realizado pelo LibreUFOP no campus ICEA.</span>
@@ -267,10 +268,10 @@
                 <span class="evento-talk">Software Livre Criativo</span>
                 <span class="evento-talk">Soberania Digital</span>
               </span>
-              <span class="evento-toggle" aria-hidden="true">+</span>
-            </summary>
-            <div class="evento-details">
-              <div class="evento-break">
+              <button class="evento-toggle" type="button" aria-label="Mostrar informações do FLISOL 2026" aria-expanded="false" aria-controls="evento-details-flisol-2026"></button>
+            </div>
+            <div class="evento-details" id="evento-details-flisol-2026" hidden>
+              
                 <div class="evento-data">Programação · 25/04/2026 · 8h–17h</div>
                 <div class="evento-desc">
                   <span class="evento-horario">8h00</span> Boas-vindas — Wagner Ragi (Diretor ICEA) · Igor Muzetti (LECoMP)<br>
@@ -282,18 +283,17 @@
                   <span class="evento-horario">16h00</span> A conquista do conhecimento com GNU/Linux · Prof. Kretcheu
                 </div>
                 <div class="evento-local">📍 UFOP/ICEA · João Monlevade — MG</div>
-              </div>
+              
               <a class="evento-link" href="https://flisol.info/FLISOL2026/Brasil/JoaoMonlevade" target="_blank" rel="noopener noreferrer">Página do evento ↗</a>
             </div>
-          </details>
+          </div>
 
-          <details class="evento-card evento-card--cancelado reveal reveal--delay-3">
-            <summary class="evento-summary">
+          <div class="evento-card evento-card--cancelado reveal reveal--delay-3">
+            <div class="evento-summary">
               <span class="evento-data">04 de Setembro · 2026 · João Monlevade</span>
               <span class="evento-nome">Debian Day 2026</span>
               <span class="evento-desc">Celebração anual do Projeto Debian. Esta edição foi cancelada.</span>
-              <span class="evento-toggle" aria-hidden="true">+</span>
-            </summary>
+            </div>
             <div class="evento-details">
               <div class="evento-desc">O encontro teria instalação, tutoriais e discussões sobre a distribuição GNU/Linux e sua comunidade.</div>
               <div class="evento-talks">
@@ -303,30 +303,31 @@
               </div>
               <a class="evento-link" href="https://wiki.debian.org/DebianDay/2026/Brazil/Jo%C3%A3o%20Monlevade" target="_blank" rel="noopener noreferrer">Página do evento ↗</a>
             </div>
-          </details>
+          </div>
         </div>
       </div>
 
       <div class="eventos-row">
         <div class="eventos-col-title reveal">◌ Previstos</div>
         <div class="eventos-cards eventos-cards-future">
-          <details class="evento-card evento-card--futuro reveal reveal--delay-1">
-            <summary class="evento-summary">
+          <div class="evento-card evento-card--futuro reveal reveal--delay-1">
+            <div class="evento-summary">
               <span class="evento-data">Em breve · 2027</span>
               <span class="evento-nome">DevOps Day</span>
               <span class="evento-desc">Encontro sobre cultura DevOps, automação e infraestrutura aberta.</span>
+
+            </div>
+      
+            <div class="evento-details">
+              <div class="evento-desc">O evento abordará ferramentas abertas de CI/CD, containers, Linux e infraestrutura como código. Data, programação e local serão divulgados em breve.</div>
               <span class="evento-talks">
                 <span class="evento-talk">CI/CD</span>
                 <span class="evento-talk">Containers</span>
                 <span class="evento-talk">Linux</span>
                 <span class="evento-talk">Automação</span>
               </span>
-              <span class="evento-toggle" aria-hidden="true">+</span>
-            </summary>
-            <div class="evento-details">
-              <div class="evento-desc">O evento abordará ferramentas abertas de CI/CD, containers, Linux e infraestrutura como código. Data, programação e local serão divulgados em breve.</div>
             </div>
-          </details>
+          <div>
         </div>
       </div>
     </div>
@@ -339,11 +340,12 @@
       <h2 class="section-title">O que <em>estudamos</em></h2>
       <br>
       <p class="section-text">
-        No LibreUFOP, estudamos tecnologias livres utilizadas tanto no meio acadêmico quanto em ambientes profissionais modernos. Nossos encontros e oficinas abordam temas técnicos, sociais e colaborativos relacionados ao ecossistema do software livre.
+        No LibreUFOP, estudamos tecnologias livres utilizadas tanto no meio acadêmico quanto em ambientes profissionais modernos. Nossos encontros e oficinas abordam temas técnicos, sociais e colaborativos relacionados ao ecossistema do software livre. As atividades são abertas a diferentes níveis de experiência, incentivando aprendizagem prática, colaboração e construção coletiva do conhecimento.
       </p>
     </div>
 
-    <div class="formacao-grid">
+    <div class="formacao-carousel" role="region" aria-label="Carrossel dos temas de estudo">
+      <div id="formacao-track" class="formacao-grid" tabindex="0" aria-label="Temas de estudo">
 
       <div class="formacao-item reveal">
         <div class="formacao-num">01</div>
@@ -409,14 +411,18 @@
         </div>
       </div>
 
+      </div>
+
+      <div class="formacao-controls">
+        <button class="formacao-control" type="button" aria-label="Tema anterior" aria-controls="formacao-track" data-formacao-direction="-1">
+          &larr;
+        </button>
+        <button class="formacao-control" type="button" aria-label="Próximo tema" aria-controls="formacao-track" data-formacao-direction="1">
+           &rarr;
+        </button>
+      </div>
     </div>
 
-    <div class="reveal">
-      <p class="section-text">
-        <br />
-        As atividades são abertas a diferentes níveis de experiência, incentivando aprendizagem prática, colaboração e construção coletiva do conhecimento.
-      </p>
-    </div>
   </section>
 
   <!-- FOOTER -->
@@ -470,42 +476,76 @@
     const eventoCards = document.querySelectorAll('.evento-card');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    // Carrosel
+    const formacaoTrack = document.querySelector('.formacao-grid');
+    const formacaoControls = document.querySelectorAll('.formacao-control');
+
+    function updateFormacaoControls() {
+      const maxScroll = formacaoTrack.scrollWidth - formacaoTrack.clientWidth;
+      formacaoControls.forEach(control => {
+        const direction = Number(control.dataset.formacaoDirection);
+        control.disabled = direction < 0
+          ? formacaoTrack.scrollLeft <= 1
+          : formacaoTrack.scrollLeft >= maxScroll - 1;
+      });
+    }
+
+    formacaoControls.forEach(control => {
+      control.addEventListener('click', () => {
+        const card = formacaoTrack.querySelector('.formacao-item');
+        const gap = parseFloat(getComputedStyle(formacaoTrack).gap) || 0;
+        const direction = Number(control.dataset.formacaoDirection);
+
+        formacaoTrack.scrollBy({
+          left: direction * (card.getBoundingClientRect().width + gap),
+          behavior: prefersReducedMotion ? 'auto' : 'smooth'
+        });
+      });
+    });
+
+    formacaoTrack.addEventListener('scroll', updateFormacaoControls, { passive: true });
+    window.addEventListener('resize', updateFormacaoControls);
+    updateFormacaoControls();
+
+    // Expandable card on events
     eventoCards.forEach(card => {
-      const summary = card.querySelector('.evento-summary');
+      const toggle = card.querySelector('.evento-toggle');
+      if (!toggle) return;
+
       const details = card.querySelector('.evento-details');
       let animation;
 
-      summary.addEventListener('click', event => {
-        event.preventDefault();
-
-        const isClosing = card.dataset.expansion === 'closing';
-        const shouldOpen = !card.open || isClosing;
+      toggle.addEventListener('click', () => {
+        const shouldOpen = toggle.getAttribute('aria-expanded') !== 'true';
+        animation?.cancel();
 
         if (prefersReducedMotion) {
-          card.open = shouldOpen;
+          details.hidden = !shouldOpen;
+          toggle.setAttribute('aria-expanded', String(shouldOpen));
           card.removeAttribute('data-expansion');
           return;
         }
 
         const currentHeight = details.getBoundingClientRect().height;
-        animation?.cancel();
 
         if (!shouldOpen) {
           card.dataset.expansion = 'closing';
+          toggle.setAttribute('aria-expanded', 'false');
           animation = details.animate([
             { height: `${currentHeight}px`, opacity: 1, transform: 'translateY(0)' },
             { height: '0px', opacity: 0, transform: 'translateY(-8px)' }
           ], { duration: 260, easing: 'ease-in' });
 
           animation.onfinish = () => {
-            card.open = false;
+            details.hidden = true;
             card.removeAttribute('data-expansion');
             animation = null;
           };
           return;
         }
 
-        card.open = true;
+        details.hidden = false;
+        toggle.setAttribute('aria-expanded', 'true');
         card.dataset.expansion = 'opening';
         const expandedHeight = details.getBoundingClientRect().height;
         animation = details.animate([

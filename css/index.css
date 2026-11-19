@@ -483,6 +483,25 @@
   background: var(--white);
 }
 
+.canal-card--oficina {
+  padding-top: 4.5rem;
+}
+
+.canal-ribbon {
+  position: absolute;
+  top: 2.3rem;
+  right: -2.5rem;
+  width: 12rem;
+  padding: 0.4rem 0.5rem;
+  transform: rotate(38deg);
+  background: var(--red);
+  color: var(--white);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+}
+
 .canal-card::before {
   content: '';
   position: absolute;
@@ -617,13 +636,25 @@
   overflow-wrap: anywhere;
 }
 
-.evento-summary::-webkit-details-marker {
-  display: none;
+.evento-card--cancelado,
+.evento-card--futuro {
+  display: flex;
+  flex-direction: column;
 }
 
-.evento-summary:focus-visible {
-  outline: 2px solid var(--red-light);
-  outline-offset: 4px;
+.evento-card--cancelado .evento-summary,
+.evento-card--futuro .evento-summary {
+  min-height: 0;
+  padding-bottom: 0;
+  cursor: default;
+}
+
+.evento-card--cancelado .evento-details,
+.evento-card--futuro .evento-details {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .evento-toggle {
@@ -632,17 +663,40 @@
   bottom: 0;
   display: grid;
   place-items: center;
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 2rem;
+  height: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
   color: var(--white);
-  line-height: 1;
-  transition: transform 0.24s ease;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
 }
 
-.evento-card[open] .evento-toggle {
+.evento-toggle::before {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-top: -0.25rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
   transform: rotate(45deg);
+  transition: transform 0.24s ease, margin 0.24s ease;
+}
+
+.evento-toggle[aria-expanded="true"]::before {
+  margin-top: 0.25rem;
+  transform: rotate(225deg);
+}
+
+.evento-toggle:hover {
+  border-color: var(--red-light);
+  background: rgba(192, 57, 43, 0.2);
+}
+
+.evento-toggle:focus-visible {
+  outline: 2px solid var(--red-light);
+  outline-offset: 4px;
 }
 
 .evento-details {
@@ -665,32 +719,29 @@
   color: var(--white);
 }
 
-.evento-card--destaque::before {
-  content: 'REALIZADO';
+.evento-card--destaque::before,
+.evento-card--futuro::before,
+.evento-card--cancelado::before {
   position: absolute;
-  top: 0.25rem;
-  right: 1rem;
+  top: 1.25rem;
+  right: 1.25rem;
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: #FF8070;
-  background: rgba(192, 57, 43, 0.2);
   padding: 0.2rem 0.6rem;
   border-radius: 100px;
 }
 
+.evento-card--destaque::before {
+  content: 'REALIZADO';
+  color: #FF8070;
+  background: rgba(192, 57, 43, 0.2);
+}
+
 .evento-card--futuro::before {
   content: 'EM BREVE';
-  position: absolute;
-  top: 0.25rem;
-  right: 1rem;
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
   color: var(--accent);
   background: rgba(212, 175, 55, 0.12);
-  padding: 0.2rem 0.6rem;
-  border-radius: 100px;
 }
 
 .evento-card--cancelado {
@@ -700,16 +751,12 @@
 
 .evento-card--cancelado::before {
   content: 'CANCELADO';
-  position: absolute;
-  top: 0.25rem;
-  right: 1rem;
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
   color: #FF8070;
   background: rgba(192, 57, 43, 0.2);
-  padding: 0.2rem 0.6rem;
-  border-radius: 100px;
+}
+
+.evento-summary > .evento-data {
+  padding-right: 7rem;
 }
 
 .evento-card--cancelado .evento-nome {
@@ -781,28 +828,74 @@
 }
 
 .formacao-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 1.2rem;
-  margin-top: 3rem;
-  max-width: 1100px;
+  padding-top: .3rem;
+  margin-top: 2.8rem;
+  max-width: auto;
+  overflow-x: auto;
+  
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.formacao-grid::-webkit-scrollbar {
+  display: none;
 }
 
 .formacao-item {
+  flex: 0 0 calc((100% - 2.4rem) / 3);
   background: var(--white);
   border-radius: 6px;
-  padding: 1.8rem 1.5rem;
+  padding: 2.8rem 2.5rem;
   border: 1px solid rgba(0, 0, 0, 0.06);
   transition: all 0.3s;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  scroll-snap-align: start;
 }
 
 .formacao-item:hover {
   border-color: var(--red);
   box-shadow: 0 4px 20px rgba(192, 57, 43, 0.1);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+}
+
+.formacao-grid:focus-visible,
+.formacao-control:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 4px;
+}
+
+.formacao-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  max-width: auto;
+  margin-top: 1rem;
+}
+
+.formacao-control {
+  padding: 0.55rem 1.2rem;
+  color: var(--gray-dark);
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  font: inherit;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, opacity 0.2s;
+}
+
+.formacao-control:not(:disabled):hover {
+  color: var(--red);
+  border-color: var(--red);
+}
+
+.formacao-control:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
 .formacao-num {
@@ -874,8 +967,8 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .formacao-grid {
-    grid-template-columns: 1fr 1fr;
+  .formacao-item {
+    flex-basis: calc((100% - 1.2rem) / 2);
   }
 }
 
@@ -913,8 +1006,8 @@
     grid-template-columns: 1fr;
   }
 
-  .formacao-grid {
-    grid-template-columns: 1fr;
+  .formacao-item {
+    flex-basis: 100%;
   }
 }
 
@@ -936,7 +1029,12 @@
     transition: none;
   }
 
-  .evento-toggle {
+  .evento-toggle,
+  .evento-toggle::before {
+    transition: none;
+  }
+
+  .formacao-control {
     transition: none;
   }
 }
