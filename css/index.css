@@ -598,6 +598,15 @@
   scrollbar-color: rgba(192, 57, 43, 0.6) rgba(255, 255, 255, 0.06);
 }
 
+.eventos-cards-future {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.eventos-cards-future::-webkit-scrollbar {
+  display: none;
+}
+
 .eventos-col-title {
   font-size: 0.78rem;
   font-weight: 700;
